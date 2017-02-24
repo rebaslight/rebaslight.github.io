@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "build": "browserify js/main.js | uglifyjs --compress --mangle > js/main.min.js"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "platform": "^1.3.3"
+  },
+  "devDependencies": {
+    "browserify": "^14.1.0",
+    "uglify-js": "^2.7.5"
+  }
+}

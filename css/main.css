@@ -6,7 +6,7 @@ body {
   height: 100%;
   background: #595959;
   color: #FCFCFC;
-  font-size: 20px;
+  font-size: 18px;
   line-heght: 1.35em;
 }
 .rl-bg-black {
@@ -53,9 +53,6 @@ footer p a {
 footer p a:hover,
 footer p a:focus {
   color: #f0c76a;
-}
-footer p a + a {
-  margin-left: 10px;
 }
 .relative {
   position: relative;

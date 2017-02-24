@@ -20,8 +20,8 @@ if(platform && platform.os){
 }
 
 $('.js-tabs a').click(function(e){
-e.preventDefault();
+    e.preventDefault();
     $(this).tab('show');
 });
 
-$('a[href="#build-tab-' + os + '"]').click()
+$('a[href="#build-tab-' + os + '"]').click();

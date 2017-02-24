@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "browserify js/main.js | uglifyjs --compress --mangle > js/main.min.js"
+    "build": "node build-html.js && browserify js/main.js | uglifyjs --compress --mangle > js/main.min.js"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
@@ -9,6 +9,8 @@
   },
   "devDependencies": {
     "browserify": "^14.1.0",
+    "ejs": "^2.5.6",
+    "request": "^2.79.0",
     "uglify-js": "^2.7.5"
   }
 }

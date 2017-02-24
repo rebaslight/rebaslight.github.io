@@ -67,5 +67,8 @@ httpGetLatest(function(err, data){
     var src = fs.readFileSync(path.resolve(__dirname, "./index.ejs"), "utf8");
     var html = ejs.render(src, info, {});
     fs.writeFileSync(path.resolve(__dirname, "./index.html"), html);
+    fs.writeFileSync(path.resolve(__dirname, "./latest.json"), JSON.stringify({
+        version: info.version.replace(/^v/, "").trim()
+    }));
 });
 

@@ -22,7 +22,7 @@ var httpGetLatest = function(callback){
 
 var btn_src = "";
 btn_src += "<p>";
-btn_src += "<a href=\"<%= url %>\" class=\"btn btn-primary\" onClick=\"ga('send','event','goal','download')\">";
+btn_src += "<a href=\"<%= url %>\" class=\"btn btn-primary\" onClick=\"ga('send','event','goal','click','download',1)\">";
 btn_src += "<i class=\"fa fa-download\"></i> Download <%= label %>";
 btn_src += "</a>";
 btn_src += "</p>";

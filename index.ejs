@@ -143,11 +143,11 @@
 
                                                     <%- btns_by_os.linux.join("") %>
 
-                                                    My prefered way is .tar.xz.
+                                                    My prefered way is .tar.bz2
                                                     Simply download it, open a terminal and extract it like so:
-                                                    <pre>$ tar xf rebaslight-3.x.x.tar.xz</pre>
+                                                    <pre>$ tar xf rebaslight-<%= version.replace(/^v/, "").trim() %>.tar.bz2</pre>
                                                     Then cd into the directory and run it!
-                                                    <pre>$ cd rebaslight-3.x.x/
+                                                    <pre>$ cd rebaslight-<%= version.replace(/^v/, "").trim() %>/
 $ ./rebaslight</pre>
                                                 </div>
                                             </div>

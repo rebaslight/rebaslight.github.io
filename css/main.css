@@ -102,3 +102,6 @@ h2 {
 .ContentArea > h2:first-child {
   margin-top: 0;
 }
+h4 {
+  font-weight: bold;
+}

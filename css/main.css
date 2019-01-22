@@ -40,6 +40,42 @@ nav.navbar.navbar-inverse.rl-navbar .navbar-header > .rl-navbar-brand > span {
 nav.navbar.navbar-inverse.rl-navbar .nav.navbar-nav.navbar-right {
   font-size: 16px;
 }
+
+.rl-card {
+  background-color: #dddddd;
+  color: #212529;
+}
+.rl-card .rl-card-header {
+  background-color: #000000;
+  color: #fcfcfc;
+  padding: 0.5rem 1rem;
+  font-size: 28px;
+  line-height: 40px;
+}
+.rl-card .rl-card-header a {
+  color: #fcfcfc;
+  text-decoration: none;
+}
+.rl-card .rl-card-header img {
+  height: 40px;
+  width: 40px;
+  margin-right: 0.2rem;
+}
+.rl-card .rl-card-body {
+  padding: 1rem;
+}
+.rl-card .rl-card-body h1 {
+  font-size: 2rem;
+}
+.rl-sticky-footer-wrap {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -4rem;
+  padding: 0 0 4rem;
+  webkit-box-sizing: border-box;
+  moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 footer {
   height: 6em;
   margin-top: 1em;
@@ -97,7 +133,7 @@ p {
   margin: 0 0 1em 0;
 }
 h2 {
-  margin: 1.5em 0 .5em 0;
+  margin: 1.5em 0 0.5em 0;
 }
 .ContentArea > h2:first-child {
   margin-top: 0;

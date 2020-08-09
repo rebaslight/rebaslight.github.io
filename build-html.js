@@ -53,12 +53,6 @@ httpGetLatest(function(err, data){
         if(/\.dmg$/i.test(url)){
             return push("mac", ".dmg");
         }
-        if(/x86_64\.AppImage$/i.test(url)){
-            return push("linux", ".AppImage (64)");
-        }
-        if(/i386\.AppImage$/i.test(url)){
-            return push("linux", ".AppImage (32)");
-        }
         if(/amd64\.deb$/i.test(url)){
             return push("linux", ".deb (64)");
         }

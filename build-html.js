@@ -2,21 +2,32 @@ var fs = require("fs");
 var ejs = require("ejs");
 var path = require("path");
 var https = require("https");
-var request = require("request");
 
-var httpGetLatest = function(callback){
-    request({
-        url: "https://api.github.com/repos/rebaslight/rebaslight/releases/latest",
-        json: true,
-        headers: {
-            "User-Agent": "request"
+var httpGetLatest = function (callback) {
+  const url =
+    "https://api.github.com/repos/rebaslight/rebaslight/releases/latest";
+  https
+    .get(url, { headers: { "User-Agent": "request" } }, (res) => {
+      if (res.statusCode !== 200) {
+        return callback(
+          new Error("Got a statusCode=" + res.statusCode + " for: " + url)
+        );
+      }
+      let body = "";
+      res.on("data", (chunk) => {
+        body += chunk;
+      });
+      res.on("end", () => {
+        try {
+          let json = JSON.parse(body);
+          callback(null, json);
+        } catch (error) {
+          callback(error);
         }
-    }, function(err, resp, body){
-        if(err)
-            return callback(err);
-        if(resp.statusCode !== 200)
-            return callback(new Error("Got a statusCode=" + resp.statusCode + " for: " + url));
-        callback(null, body);
+      });
+    })
+    .on("error", (error) => {
+      callback(error);
     });
 };
 
